@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Ilaria Porcelli — Scientific Illustrations</title>
+  <title>Ilaria Porcelli — Scientific Illustrator</title>
 
   <style>
     :root{
@@ -18,7 +18,7 @@
     html,body{
       height:100%;
       margin:0;
-      font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
       background: var(--bg);
       color: var(--text);
       -webkit-font-smoothing:antialiased;
@@ -37,17 +37,36 @@
     header {
       text-align:center;
       margin-bottom:2.5rem;
+      max-width: var(--max-width);
+      width:100%;
     }
 
-    header h1{
-      margin:0;
-      font-size: clamp(2.2rem, 4vw, 3.6rem);
-      letter-spacing: 0.06em;
-      font-weight:700;
+    /* Visually-hidden class for accessibility (keeps the H1 for screen readers/SEO) */
+    .sr-only {
+      position: absolute !important;
+      width: 1px !important;
+      height: 1px !important;
+      padding: 0 !important;
+      margin: -1px !important;
+      overflow: hidden !important;
+      clip: rect(0, 0, 0, 0) !important;
+      white-space: nowrap !important;
+      border: 0 !important;
+    }
+
+    /* Header image (responsive) */
+    .header-image {
+      display:block;
+      margin: 0 auto;
+      width: clamp(280px, 60vw, 820px);
+      max-width: 100%;
+      height: auto;
+      border-radius: 8px;
+      box-shadow: 0 6px 18px rgba(15,15,15,0.06);
     }
 
     header h2{
-      margin:0.4rem 0 0;
+      margin:0.8rem 0 0;
       font-size: clamp(1rem, 2vw, 1.25rem);
       color:var(--muted);
       font-weight:500;
@@ -108,11 +127,15 @@
 <body>
   <div class="site">
     <header>
-      <h1>ILARIA PORCELLI</h1>
+      <!-- Keep an H1 for accessibility/SEO but visually hide it -->
+      <h1 class="sr-only">ILARIA PORCELLI — scientific illustrator</h1>
+
+      <!-- Header image: put header.png inside the images/ folder (images/header.png) -->
+      <img class="header-image" src="images/header.png" alt="Ilaria Porcelli — scientific illustrator">
+
       <h2>scientific illustrator</h2>
     </header>
 
-    <!-- Gallery: replace the image src values with your images (relative paths or absolute URLs) -->
     <main class="gallery" aria-label="Portfolio gallery">
       <a class="card" href="images/photo1-large.jpg">
         <img src="images/photo1.jpg" alt="Illustration 1">
@@ -129,7 +152,6 @@
         <div class="caption">Illustration title or short description</div>
       </a>
 
-      <!-- Add more items as needed; grid will flow into rows of 3 -->
       <a class="card" href="images/photo4-large.jpg">
         <img src="images/photo4.jpg" alt="Illustration 4">
         <div class="caption">Illustration title or short description</div>
