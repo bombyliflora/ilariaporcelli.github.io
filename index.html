@@ -5,12 +5,14 @@
   <meta name="viewport" content="width=device-width,initial-scale=1" />
   <title>Ilaria Porcelli — Scientific Illustrations</title>
 
+  <!-- Load Open Sans Condensed (weights 300 and 700) -->
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans+Condensed:wght@300;700&display=swap" rel="stylesheet">
+
   <style>
     :root{
       --bg: #fff;
       --text: #111;
       --muted: #666;
-      --accent: #0a74da;
       --gap: 1rem;
       --max-width: 1100px;
     }
@@ -37,39 +39,25 @@
     header {
       text-align:center;
       margin-bottom:2.5rem;
-      max-width: var(--max-width);
-      width:100%;
     }
 
-    /* Visually-hidden class for accessibility (keeps the H1 for screen readers/SEO) */
-    .sr-only {
-      position: absolute !important;
-      width: 1px !important;
-      height: 1px !important;
-      padding: 0 !important;
-      margin: -1px !important;
-      overflow: hidden !important;
-      clip: rect(0, 0, 0, 0) !important;
-      white-space: nowrap !important;
-      border: 0 !important;
+    /* Main title: Open Sans Condensed bold */
+    header h1{
+      margin:0;
+      font-size: clamp(2.2rem, 6vw, 4.2rem);
+      letter-spacing: 0.06em;
+      font-weight:700;
+      font-family: "Open Sans Condensed", "Arial Narrow", Arial, sans-serif;
+      text-transform: uppercase;
     }
 
-    /* Header image (responsive) */
-    .header-image {
-      display:block;
-      margin: 0 auto;
-      width: clamp(280px, 60vw, 820px);
-      max-width: 100%;
-      height: auto;
-      border-radius: 8px;
-      box-shadow: 0 6px 18px rgba(15,15,15,0.06);
-    }
-
+    /* Subtitle: Open Sans Condensed regular/light */
     header h2{
-      margin:0.8rem 0 0;
-      font-size: clamp(1rem, 2vw, 1.25rem);
+      margin:0.4rem 0 0;
+      font-size: clamp(1rem, 2.2vw, 1.25rem);
       color:var(--muted);
-      font-weight:500;
+      font-weight:300;
+      font-family: "Open Sans Condensed", "Arial Narrow", Arial, sans-serif;
       text-transform: none;
     }
 
@@ -127,28 +115,23 @@
 <body>
   <div class="site">
     <header>
-      <!-- Keep an H1 for accessibility/SEO but visually hide it -->
-      <h1 class="sr-only">ILARIA PORCELLI — scientific illustrations</h1>
-
-      <!-- Header image: put header.png inside the images/ folder (images/header.png) -->
-      <img class="header-image" src="images/header.png" alt="Ilaria Porcelli — scientific illustrations">
-
+      <h1>ILARIA PORCELLI</h1>
       <h2>scientific illustrations</h2>
     </header>
 
     <main class="gallery" aria-label="Portfolio gallery">
-      <a class="card" href="images/review.png">
-        <img src="images/review.png" alt="Illustration 1">
+      <a class="card" href="images/photo1-large.jpg">
+        <img src="images/tobacco.png" alt="Illustration 1">
         <div class="caption">Illustration title or short description</div>
       </a>
 
-      <a class="card" href="images/algae.png">
-        <img src="images/algae.png" alt="Illustration 2">
+      <a class="card" href="images/photo2-large.jpg">
+        <img src="images/tobacco.png" alt="Illustration 2">
         <div class="caption">Illustration title or short description</div>
       </a>
 
-      <a class="card" href="images/eppendorf.png">
-        <img src="images/eppendorf.png" alt="Illustration 3">
+      <a class="card" href="images/photo3-large.jpg">
+        <img src="images/arabidopsis.png" alt="Illustration 3">
         <div class="caption">Illustration title or short description</div>
       </a>
 
